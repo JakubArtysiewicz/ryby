@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ryby</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}" >
+</head>
+<body>
+    <img src="{% static 'ryba.jpg' %}" >
+    <h2>Portal dla wędkarzy</h2>
+    <ol>
+        {% for i in ryby %}
+            <li>{{i}}</li>
+        {% endfor %}
+    </ol>
+    <h3>Gatunki chronione</h3>
+    <ol>
+        {% for i in okres %}
+            <li>{{i}}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
